@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "oslabs.h"
 
+struct PCB NULLPCB = {
+    .process_id = 0,
+};
+
+struct PCB ready_queue[QUEUEMAX];
+
 //pp arrival
 struct PCB handle_process_arrival_pp(struct PCB ready_queue[QUEUEMAX], int *queue_cnt, struct PCB current_process, struct PCB new_process, int timestamp){
     
